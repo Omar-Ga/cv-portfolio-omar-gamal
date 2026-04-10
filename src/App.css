@@ -1,0 +1,337 @@
+/* CSS Variables for a Premium Tech Theme */
+:root {
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #f8fafc;
+  --sidebar-accent: #38bdf8;
+  --main-bg: #ffffff;
+  --main-text: #1e293b;
+  --main-accent: #0ea5e9;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --white: #ffffff;
+  --gradient: linear-gradient(135deg, #0ea5e9, #6366f1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: #f1f5f9;
+  color: var(--main-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+
+/* Master Layout - Desktop Web */
+.cv-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  min-height: 297mm;
+  margin: 40px auto;
+  background-color: var(--white);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: left;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 320px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 50px 35px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  margin-bottom: 45px;
+}
+
+.profile-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.profile-header p {
+  font-size: 0.95rem;
+  color: var(--sidebar-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-section {
+  margin-bottom: 35px;
+}
+
+.sidebar-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sidebar-accent);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-title::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+}
+
+.contact-list li a {
+  color: var(--sidebar-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 700;
+}
+
+.skill-pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-pill {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+/* Main Content Area */
+.main-content {
+  flex-grow: 1;
+  padding: 50px 50px;
+  background-color: var(--main-bg);
+  position: relative;
+}
+
+/* Hide print spacer on web */
+.print-sidebar-spacer {
+  display: none;
+}
+
+.main-section {
+  margin-bottom: 35px;
+}
+
+.main-section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--sidebar-bg);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+  position: relative;
+}
+
+.main-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--gradient);
+}
+
+.summary-text {
+  font-size: 0.95rem;
+  color: var(--main-text);
+  line-height: 1.6;
+}
+
+/* Timeline Components */
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--border);
+  page-break-inside: avoid;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid var(--main-accent);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.item-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sidebar-bg);
+}
+
+.item-meta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--main-accent);
+  background-color: #f0f9ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.item-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.item-list {
+  list-style: none;
+}
+
+.item-list li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 15px;
+  color: var(--main-text);
+}
+
+.item-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--main-accent);
+  font-weight: bold;
+}
+
+/* Responsive Viewports */
+@media (max-width: 850px) {
+  .cv-container {
+    flex-direction: column;
+    margin: 0;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .main-content {
+    padding: 40px 30px;
+  }
+
+  .item-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* PRINT LOGIC: Sidebar Page 1 Only, Full-Width Page 2+                       */
+/* -------------------------------------------------------------------------- */
+
+@media print {
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  body {
+    background-color: white;
+  }
+
+  .cv-container {
+    display: block !important; /* Disable flex on print to allow wrapping */
+    margin: 0;
+    width: 210mm;
+    height: auto;
+    box-shadow: none;
+    position: relative;
+    overflow: visible;
+  }
+
+  .sidebar {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 320px !important;
+    height: 297mm !important; /* EXACTLY one A4 page high */
+    padding: 50px 35px;
+    z-index: 10;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .main-content {
+    display: block !important;
+    padding: 50px 50px;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  /* Pushes content for sidebar on Page 1 only */
+  .print-sidebar-spacer {
+    display: block !important;
+    float: left;
+    width: 320px;
+    height: 297mm; /* Blocks the content from Page 1 sidebar area */
+  }
+
+  /* Clean sections on Page 2+ */
+  .main-section {
+    display: block;
+    clear: none; /* Allows text wrapping around the spacer */
+  }
+
+  /* Force Experience to start on a new page (Page 2) */
+  .experience-page-break {
+    break-before: page;
+    page-break-before: always;
+    clear: both; /* Clear the floating sidebar spacer from Page 1 */
+  }
+}
