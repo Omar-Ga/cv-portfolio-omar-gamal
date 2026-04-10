@@ -1,7 +1,7 @@
 export const cvData = {
   header: {
     name: "Omar Gamal Abd El-Aal",
-    location: "Asyut, Egypt",
+    location: "Cairo, Egypt",
     phone: "+20 1068194494",
     email: "omargamalsvc@gmail.com",
     linkedin: "https://www.linkedin.com/in/omar-gamal-9b02403b1/",
@@ -45,7 +45,7 @@ export const cvData = {
       company: "Infinity Solutions",
       type: "Part-time",
       duration: "Apr 2021 - Feb 2022",
-      location: "Asyut, Egypt",
+      location: "Cairo, Egypt",
       points: [
         "Led the maintenance, updating, and deployment of mission-critical POS and financial tracking systems.",
         "Optimized database performance and ensured absolute data consistency across high-volume retail environments.",
